@@ -14,11 +14,11 @@ def first_challenge
   }
 
   #your code here
+  flavors = []
   contacts.each do |person, data|
     data.each do |attribute, value|
        if attribute == :favorite_icecream_flavors
-  flavors = []
-      value.collect do |flavor|
+      value.each do |flavor|
         flavors << flavor
       end
         flavors.delete_if do |flave|
